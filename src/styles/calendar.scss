@@ -17,12 +17,6 @@ $days: (
   padding: 0 10px;
   gap: $gap-size;
 
-  .calendar__day:first-child {
-    margin-left: map-get($days, 'sun');
-  }
-
-
-
   &__day {
     box-sizing: border-box;
     height: $cell-size;
@@ -49,6 +43,10 @@ $days: (
       transform: translateY(-20px);
       transition-duration: 0.5s;
     }
+  }
+
+  .calendar__day:first-child {
+    margin-left: $cell-size * 6 + $gap-size * 6;
   }
 
   &--start-day {
